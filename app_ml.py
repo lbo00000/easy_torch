@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # 加载模型
 model = xgb.XGBClassifier()
-model.load_model("xgboost_iris_model.json")
+model.load_model("checkpoint\\xgboost_iris_model.json")
 
 @app.route('/predict', methods=['POST'])
 def predict():
